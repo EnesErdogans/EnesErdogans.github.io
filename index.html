@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enes Erdoğan — Robotics, Embedded Systems & AI</title>
+<meta name="description" content="Portfolio of Enes Erdoğan: robotics, embedded systems and AI projects. Founder of Sumer Technology, COP31 Creathon 3rd place with KarbonPusula.">
+<meta property="og:title" content="Enes Erdoğan — Portfolio">
+<meta property="og:description" content="Robotics, embedded systems and AI projects.">
+<meta property="og:image" content="https://eneserdogans.github.io/img/karbonpusula-panel.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14201c; --ink2:#4a5a54; --paper:#f4f1ea; --card:#fbfaf6; --line:#ddd7ca;
+  --deep:#0e2a24; --accent:#d9541e; --green:#1f8a5b; --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 'IBM Plex Sans',system-ui,sans-serif}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:5;background:rgba(244,241,234,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font:700 18px 'Space Grotesk',system-ui,sans-serif;text-decoration:none;letter-spacing:-.01em}
+.logo span{color:var(--accent)}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:14px}
+nav ul a{text-decoration:none;color:var(--ink2)} nav ul a:hover{color:var(--ink)}
+header{padding:88px 0 64px;border-bottom:1px solid var(--line)}
+.tag{font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h1{font:700 clamp(40px,6.5vw,76px)/1.02 'Space Grotesk',system-ui,sans-serif;letter-spacing:-.03em;margin:14px 0 22px;max-width:14ch}
+.lead{font-size:19px;color:var(--ink2);max-width:60ch;margin:0 0 30px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;border:1px solid var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+.btn.primary{background:var(--deep);border-color:var(--deep);color:#fff}
+.btn:hover{transform:translateY(-1px)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:56px;border-top:1px solid var(--line)}
+.stat{padding:18px 18px 0 0}
+.stat b{display:block;font:700 26px 'Space Grotesk',system-ui,sans-serif;letter-spacing:-.02em}
+.stat small{font:12px var(--mono);color:var(--ink2);text-transform:uppercase;letter-spacing:.06em}
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+h2{font:700 34px/1.1 'Space Grotesk',system-ui,sans-serif;letter-spacing:-.02em;margin:8px 0 32px}
+.feature{display:grid;grid-template-columns:1.25fr 1fr;gap:36px;align-items:center;background:var(--deep);color:#e7efe9;border-radius:18px;padding:32px;margin-bottom:28px}
+.feature img{width:100%;border-radius:10px;display:block;box-shadow:0 20px 40px rgba(0,0,0,.35)}
+.feature h3{font:700 30px 'Space Grotesk',system-ui,sans-serif;margin:6px 0 10px;color:#fff}
+.feature p{color:#b9cdc4;margin:0 0 16px}
+.award{display:inline-block;background:#f2c14e;color:#3a2a00;font:600 12px var(--mono);padding:5px 10px;border-radius:6px;letter-spacing:.04em}
+.feature .tag{color:#6fd6a0}
+.feature a.btn{border-color:#6fd6a0;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(20,32,28,.08)}
+.card .thumb{aspect-ratio:16/10;background:#e9e4d8 center/cover no-repeat;border-bottom:1px solid var(--line)}
+.card .thumb.svg{background-size:contain;background-color:#fff}
+.card .thumb.none{display:flex;align-items:center;justify-content:center;font:700 44px 'Space Grotesk',system-ui,sans-serif;color:#c9c1b0}
+.card .body{padding:18px 18px 16px;display:flex;flex-direction:column;flex:1}
+.card h3{font:700 19px 'Space Grotesk',system-ui,sans-serif;margin:0 0 6px;letter-spacing:-.01em}
+.card p{margin:0 0 14px;color:var(--ink2);font-size:14.5px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.chip{font:11px var(--mono);border:1px solid var(--line);border-radius:5px;padding:2px 7px;color:var(--ink2)}
+.links{display:flex;gap:14px;margin-top:14px;font:500 13px var(--mono)}
+.links a{color:var(--accent);text-decoration:none} .links a:hover{text-decoration:underline}
+.wip{font:11px var(--mono);color:var(--green);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.skills div{border-top:2px solid var(--ink);padding-top:12px}
+.skills h4{font:500 12px var(--mono);text-transform:uppercase;letter-spacing:.1em;margin:0 0 8px;color:var(--accent)}
+.skills p{margin:0;font-size:15px}
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:16px 0;border-top:1px solid var(--line)}
+.timeline li span{font:13px var(--mono);color:var(--ink2)}
+footer{padding:56px 0 64px}
+footer h2{margin-bottom:14px}
+@media (max-width:860px){
+  .grid{grid-template-columns:1fr 1fr}.feature{grid-template-columns:1fr}.skills{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr} nav ul{display:none}
+}
+@media (max-width:560px){.grid,.skills{grid-template-columns:1fr}.timeline li{grid-template-columns:1fr;gap:2px}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#">enes<span>.</span>erdoğan</a>
+  <ul><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul>
+</div></nav>
+
+<header><div class="wrap">
+  <div class="tag">Robotics · Embedded systems · AI</div>
+  <h1>I build robots and the software behind them.</h1>
+  <p class="lead">I'm Enes Erdoğan, an engineering student at Abdullah Gül University with an Electrical &amp; Electronics background, now in my 4th year of Computer Engineering. I founded <b>Sumer Technology</b>, a student team working on robotics, software and AI.</p>
+  <div class="btns">
+    <a class="btn primary" href="#projects">See projects</a>
+    <a class="btn" href="https://github.com/EnesErdogans">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/eeneserdogan/">LinkedIn</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>3rd</b><small>COP31 Climate Creathon</small></div>
+    <div class="stat"><b>3rd</b><small>TOMTAŞ</small></div>
+    <div class="stat"><b>Top 0.3%</b><small>Kaggle House Prices</small></div>
+    <div class="stat"><b>15+</b><small>Hardware &amp; software projects</small></div>
+  </div>
+</div></header>
+
+<section id="projects"><div class="wrap">
+  <div class="tag">Selected work</div>
+  <h2>Projects</h2>
+
+  <div class="feature">
+    <img src="img/karbonpusula-panel.jpg" alt="KarbonPusula dashboard">
+    <div>
+      <span class="award">🏆 COP31 CREATHON · 3RD PLACE</span>
+      <h3>KarbonPusula</h3>
+      <p>AI-assisted carbon inventory and CBAM reporting for SMEs. Companies upload their energy invoices, AI reads them, and emissions are calculated by Scope 1/2/3 and turned into ready reports. Chosen 3rd among 200+ applications from 3 countries.</p>
+      <div class="btns">
+        <a class="btn" href="https://github.com/EnesErdogans/KarbonPusula-Showcase">Showcase</a>
+        <a class="btn" href="https://karbonpusula.sumertechnology.com">Website</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <article class="card">
+      <div class="thumb" style="background-image:url(img/thevenin-simulator.jpg)"></div>
+      <div class="body"><h3>Thevenin &amp; Norton AC Simulator</h3>
+        <p>Interactive tool that solves an AC circuit's Thevenin/Norton equivalent step by step with phasors.</p>
+        <div class="chips"><span class="chip">JavaScript</span><span class="chip">SVG</span><span class="chip">Circuits</span></div>
+        <div class="links"><a href="demos/thevenin/">Live demo →</a><a href="https://github.com/EnesErdogans/thevenin-norton-ac-simulator">Code</a></div></div>
+    </article>
+    <article class="card">
+      <div class="thumb" style="background-image:url(img/kesif-elektronik.jpg)"></div>
+      <div class="body"><div class="wip">In progress</div><h3>Keşif Aracı — Recon Robot</h3>
+        <p>Sealed, invertible tracked robot on Raspberry Pi 5 with the AI Camera, made for sand, caves and ducts.</p>
+        <div class="chips"><span class="chip">Raspberry Pi 5</span><span class="chip">DRV8833</span><span class="chip">3D printing</span></div>
+        <div class="links"><a href="demos/kesif-elektronik/">Electronics →</a><a href="https://github.com/EnesErdogans/kesif-araci">Repo</a></div></div>
+    </article>
+    <article class="card">
+      <div class="thumb svg" style="background-image:url(img/rag.svg)"></div>
+      <div class="body"><h3>Local RAG Assistant</h3>
+        <p>Offline document Q&amp;A: local LLM with Microsoft Foundry Local, SQLite vector search and a Streamlit UI.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">LLM</span><span class="chip">RAG</span><span class="chip">Streamlit</span></div>
+        <div class="links"><a href="https://github.com/EnesErdogans/Local-RAG-Assistant">Code →</a></div></div>
+    </article>
+    <article class="card">
+      <div class="thumb" style="background-image:url(img/houseprice.jpg)"></div>
+      <div class="body"><h3>House Price Prediction</h3>
+        <p>Stacked ensemble with Optuna tuning. Ranked 226 of 70,000+ on Kaggle (top 0.3%).</p>
+        <div class="chips"><span class="chip">XGBoost</span><span class="chip">Optuna</span><span class="chip">scikit-learn</span></div>
+        <div class="links"><a href="https://github.com/EnesErdogans/COMP468-">Code →</a></div></div>
+    </article>
+    <article class="card">
+      <div class="thumb" style="background-image:url(img/colortrack.jpg)"></div>
+      <div class="body"><h3>Color-Track Pan-Tilt Camera</h3>
+        <p>OpenCV tracks a chosen color and an Arduino moves two servos to follow it, controlled from a web page.</p>
+        <div class="chips"><span class="chip">OpenCV</span><span class="chip">Flask</span><span class="chip">Arduino</span></div>
+        <div class="links"><a href="https://github.com/EnesErdogans/color-track-pan-tilt-camera">Code →</a></div></div>
+    </article>
+    <article class="card">
+      <div class="thumb svg" style="background-image:url(img/parking.jpg)"></div>
+      <div class="body"><h3>Smart Parking Barrier</h3>
+        <p>RFID-authorized barrier for EV charging spots on STM32F407, written at register level with CMSIS.</p>
+        <div class="chips"><span class="chip">STM32</span><span class="chip">C</span><span class="chip">RFID</span></div>
+        <div class="links"><a href="https://github.com/EnesErdogans/Smart_parking_barrier_project">Code →</a></div></div>
+    </article>
+    <article class="card">
+      <div class="thumb" style="background-image:url(img/laser.jpg)"></div>
+      <div class="body"><h3>DIY Laser XY Scanner</h3>
+        <p>Two stepper-driven mirrors steer a laser to draw shapes and letters. Arduino firmware + Python control.</p>
+        <div class="chips"><span class="chip">Arduino</span><span class="chip">Steppers</span><span class="chip">Python</span></div>
+        <div class="links"><a href="https://github.com/EnesErdogans/DIY-Laser-XY-Scanner">Code →</a></div></div>
+    </article>
+    <article class="card">
+      <div class="thumb none">♥</div>
+      <div class="body"><h3>Electronic Stethoscope</h3>
+        <p>Filters heart and lung sounds and finds BPM and breathing rate with FFT. Arduino + MATLAB GUI.</p>
+        <div class="chips"><span class="chip">MATLAB</span><span class="chip">DSP</span><span class="chip">Arduino</span></div>
+        <div class="links"><a href="https://github.com/EnesErdogans/Electronic-Stethoscope-2024-">Code →</a></div></div>
+    </article>
+    <article class="card">
+      <div class="thumb none">⌂</div>
+      <div class="body"><h3>Mağaza Yönetim</h3>
+        <p>Offline store management for watch and jewelry shops: stock, dealer price lists, sales, credit and labels.</p>
+        <div class="chips"><span class="chip">Desktop</span><span class="chip">Windows</span><span class="chip">Commercial</span></div>
+        <div class="links"><a href="https://github.com/EnesErdogans/magaza-yonetim">Showcase →</a></div></div>
+    </article>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="tag">On the bench</div>
+  <h2>Currently building</h2>
+  <ul class="timeline">
+    <li><span>AGV</span><div><b>200 kg autonomous guided vehicle</b> — Raspberry Pi 4, RPLIDAR A1M8 mapping, AI Camera obstacle detection, Arduino Mega motor control, ROS 2 Humble in Docker.</div></li>
+    <li><span>ADIM-Q1</span><div><b>Quadruped robot dog</b> — fully 3D-printed prototype with a camera in the head, aiming to climb stairs.</div></li>
+    <li><span>Rover</span><div><b>Tracked LiDAR rover</b> — 3D-printed chassis, Pi 4 + Arduino Mega, mapping and joystick/phone control.</div></li>
+  </ul>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <div class="tag">Toolbox</div>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><h4>Languages</h4><p>Python, C / C++, ARM Assembly, JavaScript, MATLAB</p></div>
+    <div><h4>Embedded</h4><p>STM32, Arduino, ESP32, Raspberry Pi, Keil µVision</p></div>
+    <div><h4>AI / ML</h4><p>PyTorch, TensorFlow / Keras, scikit-learn, XGBoost, OpenCV, RAG / LLMs</p></div>
+    <div><h4>Robotics &amp; tools</h4><p>ROS 2, LiDAR, Docker, Linux, Git, 3D printing</p></div>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap">
+  <div class="tag">About</div>
+  <h2>A bit more</h2>
+  <ul class="timeline">
+    <li><span>Education</span><div>Abdullah Gül University, Kayseri — Electrical &amp; Electronics Engineering and Computer Engineering.</div></li>
+    <li><span>Team</span><div>Founder &amp; team captain of <a href="https://sumertechnology.com">Sumer Technology</a> — interdisciplinary student team for robotics, software and AI.</div></li>
+    <li><span>Mentoring</span><div>Mentor and project advisor at DENEYAP Technology Workshops (T3 Foundation).</div></li>
+    <li><span>Awards</span><div>3rd place, COP31 Climate Technologies Creathon (KarbonPusula) · 3rd place, TOMTAŞ.</div></li>
+  </ul>
+</div></section>
+
+<footer id="contact"><div class="wrap">
+  <div class="tag">Contact</div>
+  <h2>Let's talk.</h2>
+  <p class="lead">Open to internships, research and project collaborations in robotics, embedded systems and AI.</p>
+  <div class="btns">
+    <a class="btn primary" href="mailto:enes.erdogan@agu.edu.tr">enes.erdogan@agu.edu.tr</a>
+    <a class="btn" href="https://www.linkedin.com/in/eeneserdogan/">LinkedIn</a>
+    <a class="btn" href="https://github.com/EnesErdogans">GitHub</a>
+  </div>
+  <p style="margin-top:48px;font:12px var(--mono);color:var(--ink2)">© 2026 Enes Erdoğan</p>
+</div></footer>
+
+</body>
+</html>
